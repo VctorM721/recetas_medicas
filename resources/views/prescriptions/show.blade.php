@@ -45,18 +45,18 @@
           <tbody>
             
   @forelse($prescription->items as $it)
-    <tr class="border-t">
-      <td class="p-2">{{ $it->drug }}</td>
-      <td class="p-2">{{ $it->dose }}</td>
-      <td class="p-2">{{ $it->frequency }}</td>
-      <td class="p-2">{{ $it->duration }}</td>
-      <td class="p-2">{{ $it->instructions }}</td>
-    </tr>
-  @empty
-    <tr class="border-t">
-      <td class="p-2 text-slate-500" colspan="5">Sin medicamentos cargados.</td>
-    </tr>
-  @endforelse
+<tr>
+  <td>{{ $it->drug }}</td>
+  <td>{{ $it->dose }}</td>
+  <td>{{ $it->frequency }}</td>
+  <td>{{ $it->duration }}</td>
+  <td>{{ $it->instructions }}</td>
+</tr>
+@empty
+<tr>
+  <td colspan="5" class="text-gray-500">Sin medicamentos cargados.</td>
+</tr>
+@endforelse
 </tbody>
 
         </table>
